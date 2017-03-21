@@ -1,0 +1,14 @@
+1. 在目标机器上运行djfileserver或者djfileserver port
+   .djfileserver自动在同级目录创建data目录,data目录创建receive和send目录
+
+2. 在操作机器上运行djfileclient remote1IP:remote1Port remote2IP:remote2Port
+
+
+3. 将文件分发到各个目标机器
+   . 将文件复制到djfileclient的data/send目录下，djfileclient自动将文件同步到各个机器的data/receive目录
+
+4. 将目标机器上的文件复制到操作机器上
+   . 将目标机器上的某个文件复制到djfileserver的data/send目录，该文件自动被同步到djfileclient上的data/receive/remotePort_remotePort
+
+
+5. 该同步具有断点续传功能，随意断开网络、kill djfileserver、djfileclient，恢复后都能达成文件一致
