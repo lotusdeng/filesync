@@ -2,18 +2,24 @@ module task.monitor;
 import std.path;
 import std.file;
 import std.stdio;
+import std.concurrency;
 import std.experimental.logger;
 import core.thread;
+import core.time;
 import detached;
 import task.runningprocess;
 
 void taskMonitor()
 {
     info("TaskMonitor start");
-    while (true)
+    bool running = true;
+    while (running)
     {
-        scope (exit)
-            Thread.sleep(dur!("seconds")(5));
+        receiveTimeout(dur!("seconds")(5), (int e) {
+            info("TaskMonitor receive terminate signal");
+            running = false;
+        });
+
         try
         {
             string[string] taskExePaths = listTaskExe();
@@ -51,7 +57,8 @@ void taskMonitor()
                 string[string] env;
                 spawnProcessDetached([taskExePath], stdin, stdoutFile,
                         stderrFile, env, Config.none, workingDirectory, &pid);
-                info("TaskMonitor start task, exe:", taskName, ", pid:", pid, ", exe:", taskExePath);
+                info("TaskMonitor start task, exe:", taskName, ", pid:", pid,
+                        ", exe:", taskExePath);
 
             }
         }

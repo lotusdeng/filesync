@@ -68,6 +68,12 @@ void main(string[] args)
 		gAppData.listenPort = to!ushort(args[1]);
 	}
 	
-	spawn(&taskMonitor);
-	//startRESTServer(gAppData.listenPort);
+	Tid[] tids;
+	Tid tid = spawn(&taskMonitor);
+	tids ~= tid;
+	startRESTServer(gAppData.listenPort);
+	foreach(childTid; tids)
+	{
+		send(childTid, 0);
+	}
 }
