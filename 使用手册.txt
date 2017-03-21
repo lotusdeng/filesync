@@ -11,4 +11,10 @@
    . 将目标机器上的某个文件复制到djfileserver的data/send目录，该文件自动被同步到djfileclient上的data/receive/remotePort_remotePort
 
 
-5. 该同步具有断点续传功能，随意断开网络、kill djfileserver、djfileclient，恢复后都能达成文件一致
+5. 需要各个目标机器执行任务
+   .将任务tasklistprocess.exe复制到djfileclient的data/send/task/tasklistprocess目录
+   .djfileserver会自动执行data/receive/task/tasklistprocess/tasklistprocess.exe任务
+
+6. 该同步具有断点续传功能，随意断开网络、kill djfileserver、djfileclient，恢复后都能达成文件一致
+
+7. 可扩展的增加新任务而不需要改动djfileclient和djfileserver

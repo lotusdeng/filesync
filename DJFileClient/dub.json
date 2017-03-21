@@ -4,8 +4,7 @@
 		"lotus"
 	],
 	"dependencies": {
-		"vibe-d": "~>0.8.0-beta.4",
-		"msgpack-d": "~>0.9.6"
+		"vibe-d": "~>0.8.0-beta.4"
 	},
 	"subConfigurations": {
 		"vibe-d" : "libasync"

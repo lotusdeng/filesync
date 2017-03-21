@@ -1,3 +1,3 @@
-1. 安装Dlang的dmd 
+1. 安装Dlang的dmd（windows、linux、osx支持）
 2. cd DJFileServer && dub build
 3. cd DJFIleClient && dub build
