@@ -1,0 +1,21 @@
+{
+	"fileVersion": 1,
+	"versions": {
+		"diet-ng": "1.2.0",
+		"dproto": "2.1.1",
+		"dunit": "1.0.14",
+		"eventcore": "0.8.8",
+		"fswatch": "0.2.0",
+		"jsonserialized": "0.2.1",
+		"libasync": "0.8.3",
+		"libevent": "2.0.2+2.0.16",
+		"memutils": "0.4.9",
+		"msgpack-d": "0.9.6",
+		"openssl": "1.1.5+1.0.1g",
+		"painlesstraits": "0.3.0",
+		"std_data_json": "0.18.2",
+		"taggedalgebraic": "0.10.5",
+		"vibe-core": "1.0.0-beta.4",
+		"vibe-d": "0.8.0-beta.4"
+	}
+}
