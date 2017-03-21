@@ -9,9 +9,11 @@ import std.algorithm;
 import std.string;
 import std.experimental.logger;
 import std.process;
+import std.concurrency;
 import model.appdata;
 import rest.server;
 import mylog;
+import task.monitor;
 
 
 void createDir()
@@ -66,7 +68,6 @@ void main(string[] args)
 		gAppData.listenPort = to!ushort(args[1]);
 	}
 	
-	info("listen port:", gAppData.listenPort);
-	
-	startRESTServer(gAppData.listenPort);
+	spawn(&taskMonitor);
+	//startRESTServer(gAppData.listenPort);
 }

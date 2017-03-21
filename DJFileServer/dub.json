@@ -4,13 +4,20 @@
 		"lotus"
 	],
 	"dependencies": {
-		"vibe-d": "~>0.8.0-beta.4"
+		"vibe-d": "~>0.8.0-beta.4",
+		"detached": "~>0.1.4"
 	},
 	"subConfigurations": {
-		"vibe-d" : "libasync"
+		"vibe-d": "libasync"
 	},
 	"versions": [
 		"VibeNoSSL"
+	],
+	"sourceFiles-windows-x86": [
+		"lib/win-i386/Psapi.lib"
+	],
+	"sourceFiles-windows-x86_64": [
+		"lib/win-amd64/Psapi.lib"
 	],
 	"description": "A minimal D application.",
 	"copyright": "Copyright © 2017, lotus",
