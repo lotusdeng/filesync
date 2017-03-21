@@ -1,0 +1,16 @@
+# 目的
+. 有N台可网络连接的服务器，想提取这些服务器上的一些文件和信息到用户端电脑
+
+# 设计
+* djfileserver就是一个简单的HTTPserver，可上传、下载文件，可执行预定task目录下exe，各个task
+之行结果以文件形式存储
+* djfileclient连接服务器上传文件（Task执行文件）和下载文件（Task结果文件）
+* 各类信息分别对应各个的执行文件，如TaskListProcess....
+# 使用
+* 在每台服务器上运行djfileserver, djfileserver自动创建data、data/receive、data/send目录
+* 在用户端电脑上运行djfileclient server1IP:server1Port server2IP:server2Port，djfileclient
+自动创建data、data/receive、data/send目录，djfileclient会自动将本地data/send目录中的文件上传到
+每个djfileserver的data/receive目录，将每个djfileserver的data/send目录中的文件下载本地的data/receive/serverip_serverport目录
+* djfileclient的data/send/task目录包含可执行任务文件，当djfileserver检查到自己的data/receive/task目录
+存在任务exe时就运行它，每个任务exe的执行结果放到djfileserver的data/send/task目录下，这样任务结果就被djfileclient
+自动下载本地
