@@ -1,20 +1,20 @@
-1. ÔÚÄ¿±ê»úÆ÷ÉÏÔËĞĞdjfileserver»òÕßdjfileserver port
-   .djfileserver×Ô¶¯ÔÚÍ¬¼¶Ä¿Â¼´´½¨dataÄ¿Â¼,dataÄ¿Â¼´´½¨receiveºÍsendÄ¿Â¼
+1. åœ¨ç›®æ ‡æœºå™¨ä¸Šè¿è¡Œdjfileserveræˆ–è€…djfileserver port
+   .djfileserverè‡ªåŠ¨åœ¨åŒçº§ç›®å½•åˆ›å»ºdataç›®å½•,dataç›®å½•åˆ›å»ºreceiveå’Œsendç›®å½•
 
-2. ÔÚ²Ù×÷»úÆ÷ÉÏÔËĞĞdjfileclient remote1IP:remote1Port remote2IP:remote2Port
-
-
-3. ½«ÎÄ¼ş·Ö·¢µ½¸÷¸öÄ¿±ê»úÆ÷
-   . ½«ÎÄ¼ş¸´ÖÆµ½djfileclientµÄdata/sendÄ¿Â¼ÏÂ£¬djfileclient×Ô¶¯½«ÎÄ¼şÍ¬²½µ½¸÷¸ö»úÆ÷µÄdata/receiveÄ¿Â¼
-
-4. ½«Ä¿±ê»úÆ÷ÉÏµÄÎÄ¼ş¸´ÖÆµ½²Ù×÷»úÆ÷ÉÏ
-   . ½«Ä¿±ê»úÆ÷ÉÏµÄÄ³¸öÎÄ¼ş¸´ÖÆµ½djfileserverµÄdata/sendÄ¿Â¼£¬¸ÃÎÄ¼ş×Ô¶¯±»Í¬²½µ½djfileclientÉÏµÄdata/receive/remotePort_remotePort
+2. åœ¨æ“ä½œæœºå™¨ä¸Šè¿è¡Œdjfileclient remote1IP:remote1Port remote2IP:remote2Port
 
 
-5. ĞèÒª¸÷¸öÄ¿±ê»úÆ÷Ö´ĞĞÈÎÎñ
-   .½«ÈÎÎñtasklistprocess.exe¸´ÖÆµ½djfileclientµÄdata/send/task/tasklistprocessÄ¿Â¼
-   .djfileserver»á×Ô¶¯Ö´ĞĞdata/receive/task/tasklistprocess/tasklistprocess.exeÈÎÎñ
+3. å°†æ–‡ä»¶åˆ†å‘åˆ°å„ä¸ªç›®æ ‡æœºå™¨
+   . å°†æ–‡ä»¶å¤åˆ¶åˆ°djfileclientçš„data/sendç›®å½•ä¸‹ï¼Œdjfileclientè‡ªåŠ¨å°†æ–‡ä»¶åŒæ­¥åˆ°å„ä¸ªæœºå™¨çš„data/receiveç›®å½•
 
-6. ¸ÃÍ¬²½¾ßÓĞ¶ÏµãĞø´«¹¦ÄÜ£¬ËæÒâ¶Ï¿ªÍøÂç¡¢kill djfileserver¡¢djfileclient£¬»Ö¸´ºó¶¼ÄÜ´ï³ÉÎÄ¼şÒ»ÖÂ
+4. å°†ç›®æ ‡æœºå™¨ä¸Šçš„æ–‡ä»¶å¤åˆ¶åˆ°æ“ä½œæœºå™¨ä¸Š
+   . å°†ç›®æ ‡æœºå™¨ä¸Šçš„æŸä¸ªæ–‡ä»¶å¤åˆ¶åˆ°djfileserverçš„data/sendç›®å½•ï¼Œè¯¥æ–‡ä»¶è‡ªåŠ¨è¢«åŒæ­¥åˆ°djfileclientä¸Šçš„data/receive/remotePort_remotePort
 
-7. ¿ÉÀ©Õ¹µÄÔö¼ÓĞÂÈÎÎñ¶ø²»ĞèÒª¸Ä¶¯djfileclientºÍdjfileserver
+
+5. éœ€è¦å„ä¸ªç›®æ ‡æœºå™¨æ‰§è¡Œä»»åŠ¡
+   .å°†ä»»åŠ¡tasklistprocess.exeå¤åˆ¶åˆ°djfileclientçš„data/send/task/tasklistprocessç›®å½•
+   .djfileserverä¼šè‡ªåŠ¨æ‰§è¡Œdata/receive/task/tasklistprocess/tasklistprocess.exeä»»åŠ¡
+
+6. è¯¥åŒæ­¥å…·æœ‰æ–­ç‚¹ç»­ä¼ åŠŸèƒ½ï¼Œéšæ„æ–­å¼€ç½‘ç»œã€kill djfileserverã€djfileclientï¼Œæ¢å¤åéƒ½èƒ½è¾¾æˆæ–‡ä»¶ä¸€è‡´
+
+7. å¯æ‰©å±•çš„å¢åŠ æ–°ä»»åŠ¡è€Œä¸éœ€è¦æ”¹åŠ¨djfileclientå’Œdjfileserver
